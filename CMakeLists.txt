@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.20.0)
 
 
-project(result 
+project(microlith 
   HOMEPAGE_URL https://github.com/meanbot/result
   DESCRIPTION "microlith - systray launcher & tool" 
   VERSION 0.0.1 
@@ -35,7 +35,7 @@ target_compile_options(${PROJECT_NAME} PUBLIC "$<$<COMPILE_LANG_AND_ID:CXX,MSVC>
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 target_link_libraries(${PROJECT_NAME} fmt::fmt-header-only)
-target_link_libraries(${PROJECT_NAME} nlohmann::json)
+target_link_libraries(${PROJECT_NAME} nlohmann_json::nlohmann_json)
 target_link_libraries(${PROJECT_NAME} meanbot::error)
 target_link_libraries(${PROJECT_NAME} meanbot::result)
 
